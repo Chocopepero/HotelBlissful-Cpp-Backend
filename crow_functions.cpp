@@ -105,6 +105,7 @@ void loginUser(const crow::request &req, crow::response &res) {
 
 void createReservation(const crow::request &req, crow::response &res,
                        HotelBackend &backend) {
+  std::cout << "Received request: " << req.body << std::endl;
   try {
     // Parse JSON request body
     auto body = crow::json::load(req.body);
@@ -157,4 +158,6 @@ void createReservation(const crow::request &req, crow::response &res,
     res.write(R"({"error": "Server error: )" + std::string(e.what()) + R"("})");
     res.end();
   }
+  std::cout << "Response status code: " << res.code << std::endl;
+  std::cout << "Response body: " << res.body << std::endl;
 }

@@ -1,29 +1,34 @@
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.10)
+project(ProjectName)
 
-project(hotel)
+# Enable testing
+enable_testing()
 
-# Set the C++ standard
-set(CMAKE_CXX_STANDARD 23)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+# Download and unpack googletest at configure time
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/cmake/GoogleTest.cmake.in
+               ${CMAKE_BINARY_DIR}/googletest-download/CMakeLists.txt)
 
-# Add the executable
-add_executable(hotel main.cpp user.cpp reservation.cpp room.cpp room_db.cpp hotel_backend.cpp user_db.cpp json_util.cpp)
+execute_process(COMMAND ${CMAKE_COMMAND} -G "${CMAKE_GENERATOR}" .
+  RESULT_VARIABLE result
+  WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/googletest-download)
+if(result)
+  message(FATAL_ERROR "CMake step for googletest failed: ${result}")
+endif()
 
-# Include directories for Crow
-target_include_directories(hotel PRIVATE server_utils)
+execute_process(COMMAND ${CMAKE_COMMAND} --build .
+  RESULT_VARIABLE result
+  WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/googletest-download)
+if(result)
+  message(FATAL_ERROR "Build step for googletest failed: ${result}")
+endif()
 
-# Specify the Boost root and library directories explicitly
-set(BOOST_ROOT "/usr/include/boost")
-set(BOOST_LIBRARYDIR "/usr/lib/x86_64-linux-gnu")
+# Add googletest directly to our build. This defines
+# the gtest and gtest_main targets.
+add_subdirectory(${CMAKE_BINARY_DIR}/googletest-src
+                 ${CMAKE_BINARY_DIR}/googletest-build
+                 EXCLUDE_FROM_ALL)
 
-# Find Boost (ensure system and ASIO components)
-find_package(Boost REQUIRED COMPONENTS system)
-
-# Set the ASIO include directory manually
-set(ASIO_INCLUDE_DIR "/usr/include")
-
-# Include ASIO and Boost headers
-include_directories(${ASIO_INCLUDE_DIR} ${Boost_INCLUDE_DIRS})
-
-# Link Boost libraries
-target_link_libraries(hotel ${Boost_LIBRARIES})
+# Add the test executable
+add_executable(reserve_test tests/reserve_test.cpp)
+target_link_libraries(reserve_test gtest_main)
+add_test(NAME reserve_test COMMAND reserve_test)

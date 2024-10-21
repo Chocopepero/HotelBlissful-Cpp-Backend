@@ -1,29 +1,33 @@
-
-# Consider dependencies only in project.
-set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
-
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
+  "CXX"
+  )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_CXX
+  "/workspaces/CPSC362_Project/hotel_backend.cpp" "/workspaces/CPSC362_Project/CMakeFiles/hotel.dir/hotel_backend.cpp.o"
+  "/workspaces/CPSC362_Project/json_util.cpp" "/workspaces/CPSC362_Project/CMakeFiles/hotel.dir/json_util.cpp.o"
+  "/workspaces/CPSC362_Project/main.cpp" "/workspaces/CPSC362_Project/CMakeFiles/hotel.dir/main.cpp.o"
+  "/workspaces/CPSC362_Project/reservation.cpp" "/workspaces/CPSC362_Project/CMakeFiles/hotel.dir/reservation.cpp.o"
+  "/workspaces/CPSC362_Project/room.cpp" "/workspaces/CPSC362_Project/CMakeFiles/hotel.dir/room.cpp.o"
+  "/workspaces/CPSC362_Project/room_db.cpp" "/workspaces/CPSC362_Project/CMakeFiles/hotel.dir/room_db.cpp.o"
+  "/workspaces/CPSC362_Project/user.cpp" "/workspaces/CPSC362_Project/CMakeFiles/hotel.dir/user.cpp.o"
+  "/workspaces/CPSC362_Project/user_db.cpp" "/workspaces/CPSC362_Project/CMakeFiles/hotel.dir/user_db.cpp.o"
+  )
+set(CMAKE_CXX_COMPILER_ID "GNU")
+
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_CXX
+  "BOOST_ALL_NO_LIB"
+  "BOOST_SYSTEM_DYN_LINK"
   )
 
-# The set of dependency files which are needed:
-set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/sam/Documents/CPSC362/CPSC362_Project/hotel_backend.cpp" "CMakeFiles/hotel.dir/hotel_backend.cpp.o" "gcc" "CMakeFiles/hotel.dir/hotel_backend.cpp.o.d"
-  "/home/sam/Documents/CPSC362/CPSC362_Project/json_util.cpp" "CMakeFiles/hotel.dir/json_util.cpp.o" "gcc" "CMakeFiles/hotel.dir/json_util.cpp.o.d"
-  "/home/sam/Documents/CPSC362/CPSC362_Project/main.cpp" "CMakeFiles/hotel.dir/main.cpp.o" "gcc" "CMakeFiles/hotel.dir/main.cpp.o.d"
-  "/home/sam/Documents/CPSC362/CPSC362_Project/reservation.cpp" "CMakeFiles/hotel.dir/reservation.cpp.o" "gcc" "CMakeFiles/hotel.dir/reservation.cpp.o.d"
-  "/home/sam/Documents/CPSC362/CPSC362_Project/room.cpp" "CMakeFiles/hotel.dir/room.cpp.o" "gcc" "CMakeFiles/hotel.dir/room.cpp.o.d"
-  "/home/sam/Documents/CPSC362/CPSC362_Project/room_db.cpp" "CMakeFiles/hotel.dir/room_db.cpp.o" "gcc" "CMakeFiles/hotel.dir/room_db.cpp.o.d"
-  "/home/sam/Documents/CPSC362/CPSC362_Project/user.cpp" "CMakeFiles/hotel.dir/user.cpp.o" "gcc" "CMakeFiles/hotel.dir/user.cpp.o.d"
-  "/home/sam/Documents/CPSC362/CPSC362_Project/user_db.cpp" "CMakeFiles/hotel.dir/user_db.cpp.o" "gcc" "CMakeFiles/hotel.dir/user_db.cpp.o.d"
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "server_utils"
   )
 
-# Targets to which this target links which contain Fortran sources.
-set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
-  )
-
-# Targets to which this target links which contain Fortran sources.
-set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
+# Targets to which this target links.
+set(CMAKE_TARGET_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.

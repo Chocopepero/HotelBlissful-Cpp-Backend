@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/workspaces/CPSC362_Project/_deps/asio-subbuild/CMakeFiles/asio-populate"
+		},
+		{
+			"file" : "/workspaces/CPSC362_Project/_deps/asio-subbuild/CMakeFiles/asio-populate.rule"
+		},
+		{
+			"file" : "/workspaces/CPSC362_Project/_deps/asio-subbuild/CMakeFiles/asio-populate-complete.rule"
+		},
+		{
+			"file" : "/workspaces/CPSC362_Project/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-install.rule"
+		},
+		{
+			"file" : "/workspaces/CPSC362_Project/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-mkdir.rule"
+		},
+		{
+			"file" : "/workspaces/CPSC362_Project/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-download.rule"
+		},
+		{
+			"file" : "/workspaces/CPSC362_Project/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-update.rule"
+		},
+		{
+			"file" : "/workspaces/CPSC362_Project/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-patch.rule"
+		},
+		{
+			"file" : "/workspaces/CPSC362_Project/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-configure.rule"
+		},
+		{
+			"file" : "/workspaces/CPSC362_Project/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-build.rule"
+		},
+		{
+			"file" : "/workspaces/CPSC362_Project/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/asio-populate-test.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"asio-populate"
+		],
+		"name" : "asio-populate"
+	}
+}

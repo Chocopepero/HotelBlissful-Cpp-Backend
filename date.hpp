@@ -1,6 +1,5 @@
 #pragma once
 
-#include <compare>
 #include <string>
 #include <sstream>
 
@@ -24,21 +23,16 @@ public:
   int get_Day() const { return _day; }
   int get_Year() const { return _year; }
 
-  std::weak_ordering operator<=>(const Date &rhs) const noexcept {
-    auto result = _year <=> rhs._year;
-    if (result != 0) {
-      return result;
+    bool operator<(const Date &rhs) const noexcept {
+        if (_year != rhs._year) {
+            return _year < rhs._year;  // Compare years first
+        }
+        if (_month != rhs._month) {
+            return _month < rhs._month; // If years are equal, compare months
+        }
+        return _day < rhs._day; // If months are equal, compare days
     }
-    result = _month <=> rhs._month;
-    if (result != 0) {
-      return result;
-    }
-    result = _day <=> rhs._day;
-    if (result != 0) {
-      return result;
-    }
-    return (std::weak_ordering::equivalent);
-  }
+
 
   bool operator==(const Date &rhs) const noexcept {
     return (_month == rhs._month && _day == rhs._day && _year == rhs._year);

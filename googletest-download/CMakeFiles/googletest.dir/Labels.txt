@@ -1,0 +1,14 @@
+# Target labels
+ googletest
+# Source files and their labels
+/workspaces/CPSC362_Project/googletest-download/CMakeFiles/googletest
+/workspaces/CPSC362_Project/googletest-download/CMakeFiles/googletest.rule
+/workspaces/CPSC362_Project/googletest-download/CMakeFiles/googletest-complete.rule
+/workspaces/CPSC362_Project/googletest-download/googletest-prefix/src/googletest-stamp/googletest-install.rule
+/workspaces/CPSC362_Project/googletest-download/googletest-prefix/src/googletest-stamp/googletest-mkdir.rule
+/workspaces/CPSC362_Project/googletest-download/googletest-prefix/src/googletest-stamp/googletest-download.rule
+/workspaces/CPSC362_Project/googletest-download/googletest-prefix/src/googletest-stamp/googletest-update.rule
+/workspaces/CPSC362_Project/googletest-download/googletest-prefix/src/googletest-stamp/googletest-patch.rule
+/workspaces/CPSC362_Project/googletest-download/googletest-prefix/src/googletest-stamp/googletest-configure.rule
+/workspaces/CPSC362_Project/googletest-download/googletest-prefix/src/googletest-stamp/googletest-build.rule
+/workspaces/CPSC362_Project/googletest-download/googletest-prefix/src/googletest-stamp/googletest-test.rule
