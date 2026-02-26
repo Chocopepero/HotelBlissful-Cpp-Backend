@@ -126,8 +126,6 @@ void createReservation(const crow::request &req, crow::response &res,
     std::string type = body["roomType"].s();
 
     // Everything's required in HTML.
-    // Too tired to validate inputs
-
     std::pair<bool, int> result =
         backend.CreateReservation(name, phone, adults, children, number,
                                   arrivalDate, departureDate, type);
